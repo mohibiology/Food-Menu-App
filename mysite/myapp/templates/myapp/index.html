@@ -1,0 +1,7 @@
+<ol>
+    {% for item in item_list %}
+    <a href="{% url 'myapp:detail' item.id %}">
+        <li>{{item.item_name}} -- {{item.item_description}} -- {{item.item_price}}</li>
+    </a>
+    {% endfor %}
+</ol>
