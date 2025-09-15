@@ -1,19 +1,20 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <ol>
+{% extends 'myapp/base.html'%}
+{% block body %}
+    <div>
         {% for item in item_list %}
-        <a href="{% url 'myapp:detail' item.id %}">
-            <li>{{item.item_name}} -- {{item.item_description}} -- {{item.item_price}}</li>
-        </a>
+        <div class="m-10 flex w-1/2 mx-auto">
+            <div>
+                <img class="w-64 rounded-lg" src="{{item.item_image}}" alt="">
+            </div>
+            <div class="mx-5">
+                <div class="font-bold">{{item.item_name}}</div>
+                <div>{{item.item_description}}</div>
+                <div class="text-green-700 font-bold">${{item.item_price}}</div>
+            </div>
+            <div>
+                <a class="bg-yellow-200 font-bold px-4 py-2 rounded-lg" href="{% url 'myapp:detail' item.id %}">View Details</a>
+            </div>
+        </div>
         {% endfor %}
-    </ol>
-</body>
-</html>
+    </div>  
+{% endblock %}

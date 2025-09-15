@@ -1,5 +1,8 @@
-{{item.item_name}}
-<br>
-{{item.item_description}}
-<br>
-{{item.item_price}}
+{% extends 'myapp/base.html'%}
+{% block body %}
+    {{item.item_name}}
+    <br>
+    {{item.item_description}}
+    <br>
+    {{item.item_price}}
+{% endblock %}
