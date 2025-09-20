@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+from .forms import RegisterForm
 # Create your views here.
 
 def register(request):
-    form = UserCreationForm(request.POST)
+    form = RegisterForm(request.POST or None)
     if request.method=="POST":
         if form.is_valid():
             form.save()
-            return redirect('myapp:index')
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Pakhair raghle {username}, sta account jor sho')
+            return redirect('users:login')
     context = {
         'form': form
     }
