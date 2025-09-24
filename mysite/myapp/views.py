@@ -55,32 +55,38 @@ class ClassCreate_ItemView(CreateView):
     model = Item
     fields = ['item_name', 'item_description', 'item_price', 'item_image']
     template_name = 'myapp/item-form.html'
+    def form_valid(self, form):
+        form.instance.user_name = self.request.user
+        return super().form_valid(form)
 
-@login_required
-def update_item(request, id):
-    item = Item.objects.get(id = id)
-    form = ItemForm(request.POST or None, instance = item)
-    if form.is_valid():
-            form.save()
-            return redirect('myapp:index')
-    context = {
-        'form': form
-    }
-    return render(request, 'myapp/item-form.html', context)
+# @login_required
+# def update_item(request, id):
+#     item = Item.objects.get(id = id)
+#     form = ItemForm(request.POST or None, instance = item)
+#     if form.is_valid():
+#             form.save()
+#             return redirect('myapp:index')
+#     context = {
+#         'form': form
+#     }
+#     return render(request, 'myapp/item-form.html', context)
 
 @method_decorator(login_required, name='dispatch')
 class ClassUpdate_ItemView(UpdateView):
     model = Item
     fields = ['item_name', 'item_description', 'item_price', 'item_image']
     template_name = 'myapp/item-form.html'
+    def form_valid(self, form):
+        form.instance.user_name = self.request.user
+        return super().form_valid(form)
 
-@login_required
-def delete_item(request, id):
-    item = Item.objects.get(id=id)
-    if request.method == "POST":
-        item.delete()
-        return redirect('myapp:index')
-    return render(request, 'myapp/item-delete.html')
+# @login_required
+# def delete_item(request, id):
+#     item = Item.objects.get(id=id)
+#     if request.method == "POST":
+#         item.delete()
+#         return redirect('myapp:index')
+#     return render(request, 'myapp/item-delete.html')
 
 @method_decorator(login_required, name='dispatch')
 class ClassDelete_ItemView(DeleteView):

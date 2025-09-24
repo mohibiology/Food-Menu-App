@@ -7,12 +7,13 @@
                 <img class="w-64 rounded-lg" src="{{item.item_image}}" alt="">
             </div>
             <div class="mx-5">
-                <div class="font-bold">{{item.item_name}}</div>
+                <div class="font-bold text-xl">{{item.item_name}}</div>
+                <div class="font-bold">{{item.user_name}}</div>
                 <div>{{item.item_description}}</div>
                 <div class="text-green-700 font-bold">${{item.item_price}}</div>
             </div>
             <div>
-                <a class="bg-yellow-200 font-bold px-4 py-2 rounded-lg" href="{% url 'myapp:detail' item.id %}">View Details</a>
+                <a class="bg-yellow-200 font-bold text-xl px-4 py-2 rounded-lg" href="{% url 'myapp:detail' item.id %}">View Details</a>
             </div>
         </div>
         {% endfor %}
