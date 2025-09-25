@@ -1,1 +1,8 @@
-<h2>You have been logout</h2>
+{% extends 'myapp/base.html'%}
+{% block body %}
+    <form method="POST">
+        {%csrf_token%}
+        <div class="font-bold text-xl px-4 py-4">Are you sure you want to logout?</div>
+        <button type="submit" class="bg-red-500 px-4 py-2 font-bold rounded-md mx-4">Confirm</button>
+    </form>
+{% endblock %}

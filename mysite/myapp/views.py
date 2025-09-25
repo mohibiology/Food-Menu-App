@@ -76,9 +76,9 @@ class ClassUpdate_ItemView(UpdateView):
     model = Item
     fields = ['item_name', 'item_description', 'item_price', 'item_image']
     template_name = 'myapp/item-form.html'
-    def form_valid(self, form):
-        form.instance.user_name = self.request.user
-        return super().form_valid(form)
+    
+    def get_queryset(self):
+        return Item.objects.filter(user_name=self.request.user)
 
 # @login_required
 # def delete_item(request, id):
@@ -93,3 +93,6 @@ class ClassDelete_ItemView(DeleteView):
     model = Item
     template_name = 'myapp/item-delete.html'
     success_url = reverse_lazy('myapp:index')
+
+    def get_queryset(self):
+        return Item.objects.filter(user_name=self.request.user)
