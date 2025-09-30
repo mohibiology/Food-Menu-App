@@ -11,6 +11,11 @@
                 <div class="font-bold">{{item.user_name}}</div>
                 <div>{{item.item_description}}</div>
                 <div class="text-green-700 font-bold">${{item.item_price}}</div>
+                {% if item.is_available %}
+                    <div class="text-green-700">Available</div>
+                {% else %}
+                    <div class="text-red-700">Not Available</div>
+                {% endif %}
             </div>
             <div>
                 <a class="bg-yellow-200 font-bold text-xl px-4 py-2 rounded-lg" href="{% url 'myapp:detail' item.id %}">View Details</a>
