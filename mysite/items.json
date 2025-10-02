@@ -1,0 +1,262 @@
+[
+{
+    "model": "myapp.item",
+    "pk": 44,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Margherita Pizza",
+        "item_description": "Classic Italian pizza with mozzarella and tomato",
+        "item_price": "8.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:42.928Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 45,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Cheeseburger",
+        "item_description": "Beef patty with cheese, lettuce and tomato",
+        "item_price": "6.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:42.976Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 46,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Caesar Salad",
+        "item_description": "Crisp romaine with parmesan and croutons",
+        "item_price": "5.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.004Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 47,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Chicken Tacos",
+        "item_description": "Soft tortillas with grilled chicken and salsa",
+        "item_price": "7.29",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.051Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 48,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Sushi Platter",
+        "item_description": "Assorted rolls with tuna, salmon and avocado",
+        "item_price": "12.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.098Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 49,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Pasta Alfredo",
+        "item_description": "Creamy white sauce pasta with mushrooms",
+        "item_price": "9.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.129Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 50,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Falafel Wrap",
+        "item_description": "Middle Eastern wrap with chickpea patties",
+        "item_price": "6.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.176Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 51,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Pad Thai",
+        "item_description": "Thai stir-fried noodles with peanuts and veggies",
+        "item_price": "10.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.223Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 52,
+    "fields": {
+        "user_name": 1,
+        "item_name": "French Fries",
+        "item_description": "Crispy golden potato fries with salt",
+        "item_price": "3.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.269Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 53,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Veggie Burger",
+        "item_description": "Plant-based patty with lettuce and tomato",
+        "item_price": "6.29",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.317Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 54,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Butter Chicken",
+        "item_description": "Indian-style chicken in creamy tomato sauce",
+        "item_price": "11.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.364Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 55,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Ramen Bowl",
+        "item_description": "Japanese noodle soup with egg and pork",
+        "item_price": "10.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.395Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 56,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Greek Salad",
+        "item_description": "Feta cheese, olives, cucumber and tomatoes",
+        "item_price": "7.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.442Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 57,
+    "fields": {
+        "user_name": 1,
+        "item_name": "BBQ Ribs",
+        "item_description": "Slow cooked pork ribs with barbecue sauce",
+        "item_price": "14.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.489Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 58,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Shawarma",
+        "item_description": "Grilled meat wrap with garlic sauce",
+        "item_price": "8.49",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.536Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 59,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Pancakes",
+        "item_description": "Stack of fluffy pancakes with maple syrup",
+        "item_price": "5.79",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.568Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 60,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Mutton Biryani",
+        "item_description": "Fragrant rice with spiced mutton",
+        "item_price": "12.29",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.615Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 61,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Spring Rolls",
+        "item_description": "Crispy rolls stuffed with vegetables",
+        "item_price": "4.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.663Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 62,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Fish and Chips",
+        "item_description": "British-style fried fish with fries",
+        "item_price": "9.99",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.695Z"
+    }
+},
+{
+    "model": "myapp.item",
+    "pk": 63,
+    "fields": {
+        "user_name": 1,
+        "item_name": "Ice Cream Sundae",
+        "item_description": "Vanilla ice cream topped with chocolate sauce",
+        "item_price": "4.59",
+        "item_image": "https://thumbs.dreamstime.com/b/laughing-cooking-couple-kitchen-silly-meal-prep-morning-joke-smile-apartment-relationship-man-affection-339924493.jpg",
+        "is_available": true,
+        "created_at": "2025-10-01T13:40:43.742Z"
+    }
+}
+]
