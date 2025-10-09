@@ -25,12 +25,12 @@ class TimerMiddleware:
         return response
 
 class BlockIPMiddleware:
-    Blocked_IPs = ["127.0.0.1"]
+    Blocked_IPs = [""]
     def __init__(self, get_response):
         self.get_response = get_response
 
     def __call__(self, request):
-        ip = ip.META.get("REMOTE_ADDR")
+        ip = request.META.get("REMOTE_ADDR")
         if ip in self.Blocked_IPs:
             return HttpResponseForbidden("Your IP is blocked")
         return self.get_response(request)
