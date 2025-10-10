@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpResponse
 from .models import Item
 from .forms import ItemForm
@@ -11,13 +11,18 @@ from django.urls import reverse_lazy
 from django.core.paginator import Paginator
 from django.views.decorators.cache import cache_page
 from django.views.decorators.vary import vary_on_headers
+import logging
 # Create your views here.
+
+logger = logging.getLogger(__name__)
 
 @login_required
 # @cache_page(60 * 15)
 # @vary_on_headers("User-Agent")
 def index(request):
+    logger.info("Fetching all items from the database")
     item_list = Item.objects.all()
+    logger.debug(f"Found {item_list.count()} Items")
     paginator = Paginator(item_list, 5)
     page_number = request.GET.get("page")
     page_obj = paginator.get_page(page_number)
@@ -32,19 +37,25 @@ def index(request):
 #     template_name = 'myapp/index.html'
 #     context_object_name = 'item_list'
 
-# @login_required
-# def detail(request, id):
-#     item = Item.objects.get(id=id)
-#     context = {
-#         'item':item
-#     }
-#     return render(request, 'myapp/detail.html', context)
+@login_required
+def detail(request, id):
+    logger.info(f"Fetching details of item with id: {id}")
+    try:
+        item = get_object_or_404(Item, pk=id)
+        logger.debug(f"Fetched details of item with id: {id}")
+    except Exception as e:
+        logger.error(f"Error fetching the item with id: {id}, {e}")
+        raise
+    context = {
+        'item':item
+    }
+    return render(request, 'myapp/detail.html', context)
 
-@method_decorator(login_required, name='dispatch')
-class DetailClassView(DetailView):
-    model = Item
-    template_name = 'myapp/detail.html'
-    context_object_name = 'item'
+# @method_decorator(login_required, name='dispatch')
+# class DetailClassView(DetailView):
+#     model = Item
+#     template_name = 'myapp/detail.html'
+#     context_object_name = 'item'
 
 @login_required
 def create_item(request):

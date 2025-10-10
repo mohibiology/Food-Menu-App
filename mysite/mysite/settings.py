@@ -150,3 +150,33 @@ CACHES = {
         "LOCATION" : BASE_DIR / "cache",
     }
 }
+
+LOG_LEVEL = "DEBUG" if os.getenv("DJANGO_DEBUG", "True") == "True" else "WARNING"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {"class": "logging.StreamHandler"},
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": BASE_DIR / "debug.log",
+            "level": LOG_LEVEL,
+            "formatter": "simple",
+        },
+    },
+    "formatters": {
+        "simple": {
+            "format": "{levelname} {asctime} {message}",
+            "style": "{",
+        },
+    },
+    "root": {
+        "handlers": ["console", "file"],
+        "level": LOG_LEVEL,
+    },
+    "loggers": {
+        # keep Django’s built-in logging quiet
+        "django": {"handlers": ["file"], "level": "ERROR", "propagate": False},
+    },
+}
