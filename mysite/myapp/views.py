@@ -72,7 +72,7 @@ def create_item(request):
 @method_decorator(login_required, name='dispatch')
 class ClassCreate_ItemView(CreateView):
     model = Item
-    fields = ['item_name', 'item_description', 'item_price', 'item_image']
+    form_class = ItemForm
     template_name = 'myapp/item-form.html'
     def form_valid(self, form):
         form.instance.user_name = self.request.user

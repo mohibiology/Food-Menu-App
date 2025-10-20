@@ -1,3 +1,4 @@
+from multiprocessing import Value
 from django import forms
 from .models import Item
 class ItemForm(forms.ModelForm):
@@ -9,3 +10,19 @@ class ItemForm(forms.ModelForm):
             'item_price',
             'item_image'
         ]
+        widgets = {
+            "item_name":forms.TextInput(attrs={"placeholder":"e.g peeza","required":True}),
+        }
+    def clean_item_price(self):
+        price = self.cleaned_data["item_price"]
+        if price < 0:
+            raise forms.ValidationError("Price cannot be negative")
+        return price
+
+    def clean(self):
+        cleaned = super().clean()
+        name = cleaned.get("item_name")
+        desc = cleaned.get("item_description")
+        if name and desc and name.lower() == desc.lower():
+            self.add_error("item_description","Description cannot be same as the name")
+        return cleaned

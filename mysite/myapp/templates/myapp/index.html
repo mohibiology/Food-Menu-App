@@ -1,18 +1,19 @@
 {% extends 'myapp/base.html'%}
+{% load custom_filters %}
 {% block body %}
-{% load cache %}
     <div>
-        {% cache 900 page_obj %}
         {% for item in page_obj %}
         <div class="m-10 flex w-1/2 mx-auto">
             <div>
                 <img class="w-64 rounded-lg" src="{{item.item_image}}" alt="">
             </div>
             <div class="mx-5">
-                <div class="font-bold text-xl">{{item.item_name}}</div>
+                <div class="font-bold text-xl">{{item.item_name|lower}}</div>
                 <div class="font-bold">{{item.user_name}}</div>
-                <div>{{item.item_description}}</div>
+                <div>{{item.item_description|lower|truncatechars:20}}</div>
+                <div>{{item.created_at|timesince}}</div>
                 <div class="text-green-700 font-bold">${{item.item_price}}</div>
+                <div class="text-green-700 font-bold">${{item.item_price|discount:10|floatformat:2}}</div>
                 {% if item.is_available %}
                     <div class="text-green-700">Available</div>
                 {% else %}
@@ -24,7 +25,6 @@
             </div>
         </div>
         {% endfor %}
-        {% endcache %}
     </div>
     <div class="flex items-center justify-center space-x-4 pb-4">
         {% if page_obj.has_previous %}
