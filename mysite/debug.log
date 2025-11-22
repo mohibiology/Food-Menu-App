@@ -3322,3 +3322,73 @@ Traceback (most recent call last):
     raise ValueError(
 ValueError: 'ItemForm' has no field named 'item_desc'.
 ERROR 2025-10-20 18:28:48,412 "POST /myapp/add/ HTTP/1.1" 500 124141
+ERROR 2025-11-22 11:25:05,991 Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/rest_framework/response.py", line 74, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/rest_framework/renderers.py", line 730, in render
+    template = loader.get_template(self.template)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/abdul-mohib/Desktop/Food Menu App/Food-Menu-App/mysite/venv/lib/python3.12/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: rest_framework/api.html
+ERROR 2025-11-22 11:25:05,997 "GET / HTTP/1.1" 500 88149
+DEBUG 2025-11-22 11:42:29,208 Importing AvifImagePlugin
+DEBUG 2025-11-22 11:42:29,230 Importing BlpImagePlugin
+DEBUG 2025-11-22 11:42:29,239 Importing BmpImagePlugin
+DEBUG 2025-11-22 11:42:29,240 Importing BufrStubImagePlugin
+DEBUG 2025-11-22 11:42:29,243 Importing CurImagePlugin
+DEBUG 2025-11-22 11:42:29,247 Importing DcxImagePlugin
+DEBUG 2025-11-22 11:42:29,252 Importing DdsImagePlugin
+DEBUG 2025-11-22 11:42:29,276 Importing EpsImagePlugin
+DEBUG 2025-11-22 11:42:29,282 Importing FitsImagePlugin
+DEBUG 2025-11-22 11:42:29,285 Importing FliImagePlugin
+DEBUG 2025-11-22 11:42:29,289 Importing FpxImagePlugin
+DEBUG 2025-11-22 11:42:29,295 Image: failed to import FpxImagePlugin: No module named 'olefile'
+DEBUG 2025-11-22 11:42:29,296 Importing FtexImagePlugin
+DEBUG 2025-11-22 11:42:29,301 Importing GbrImagePlugin
+DEBUG 2025-11-22 11:42:29,304 Importing GifImagePlugin
+DEBUG 2025-11-22 11:42:29,305 Importing GribStubImagePlugin
+DEBUG 2025-11-22 11:42:29,309 Importing Hdf5StubImagePlugin
+DEBUG 2025-11-22 11:42:29,312 Importing IcnsImagePlugin
+DEBUG 2025-11-22 11:42:29,320 Importing IcoImagePlugin
+DEBUG 2025-11-22 11:42:29,327 Importing ImImagePlugin
+DEBUG 2025-11-22 11:42:29,332 Importing ImtImagePlugin
+DEBUG 2025-11-22 11:42:29,337 Importing IptcImagePlugin
+DEBUG 2025-11-22 11:42:29,340 Importing JpegImagePlugin
+DEBUG 2025-11-22 11:42:29,341 Importing Jpeg2KImagePlugin
+DEBUG 2025-11-22 11:42:29,342 Importing McIdasImagePlugin
+DEBUG 2025-11-22 11:42:29,345 Importing MicImagePlugin
+DEBUG 2025-11-22 11:42:29,349 Image: failed to import MicImagePlugin: No module named 'olefile'
+DEBUG 2025-11-22 11:42:29,349 Importing MpegImagePlugin
+DEBUG 2025-11-22 11:42:29,356 Importing MpoImagePlugin
+DEBUG 2025-11-22 11:42:29,372 Importing MspImagePlugin
+DEBUG 2025-11-22 11:42:29,374 Importing PalmImagePlugin
+DEBUG 2025-11-22 11:42:29,381 Importing PcdImagePlugin
+DEBUG 2025-11-22 11:42:29,385 Importing PcxImagePlugin
+DEBUG 2025-11-22 11:42:29,385 Importing PdfImagePlugin
+DEBUG 2025-11-22 11:42:29,432 Importing PixarImagePlugin
+DEBUG 2025-11-22 11:42:29,435 Importing PngImagePlugin
+DEBUG 2025-11-22 11:42:29,436 Importing PpmImagePlugin
+DEBUG 2025-11-22 11:42:29,437 Importing PsdImagePlugin
+DEBUG 2025-11-22 11:42:29,440 Importing QoiImagePlugin
+DEBUG 2025-11-22 11:42:29,445 Importing SgiImagePlugin
+DEBUG 2025-11-22 11:42:29,450 Importing SpiderImagePlugin
+DEBUG 2025-11-22 11:42:29,457 Importing SunImagePlugin
+DEBUG 2025-11-22 11:42:29,463 Importing TgaImagePlugin
+DEBUG 2025-11-22 11:42:29,467 Importing TiffImagePlugin
+DEBUG 2025-11-22 11:42:29,468 Importing WebPImagePlugin
+DEBUG 2025-11-22 11:42:29,480 Importing WmfImagePlugin
+DEBUG 2025-11-22 11:42:29,483 Importing XbmImagePlugin
+DEBUG 2025-11-22 11:42:29,491 Importing XpmImagePlugin
+DEBUG 2025-11-22 11:42:29,499 Importing XVThumbImagePlugin

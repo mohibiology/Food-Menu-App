@@ -17,8 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
+from rest_framework import routers
 from django.conf import settings
+from newapp.views import MovieViewSet
+
+router = routers.DefaultRouter()
+router.register('movies', MovieViewSet)
+
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('myapp/', include('myapp.urls')),
     path('users/', include('users.urls')),
